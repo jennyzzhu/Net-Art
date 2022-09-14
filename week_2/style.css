@@ -1,0 +1,15 @@
+body {
+    background-color: #1C1C1C;
+    color: #FACF37;
+    font-family: fira mono, monospace;
+    box-sizing: border-box;
+}
+
+.button {
+    color: #FACF37;
+    border: 1px solid #FACF37;
+}
+
+/* div {
+    border: 1px solid white;
+} */
