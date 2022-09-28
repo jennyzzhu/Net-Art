@@ -1,0 +1,227 @@
+body {
+  margin: 0;
+  background: #BAD3F3;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.kitty-maker {
+  padding: 1rem;
+  height: calc(100vh - 2rem);
+  position: relative;
+}
+
+/* cat styles */
+.cat-container {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+.cat-container.static {
+  position: relative;
+}
+
+.cat-speech-bubble {
+  border: 2px solid #333;
+  color: #333;
+  background: #fff;
+  padding: 0.5rem 0.875rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.cat {
+  width: 100%;
+  position: absolute;
+  cursor: grab;
+}
+
+.cat-head-wrapper {
+  width: 80px;
+  height: 50px;
+  position: relative;
+}
+
+.cat-head {
+  width: 100%;
+  height: 100%;
+  border-radius: 55% 55% 50% 50%;
+  background: rgb(50, 50, 50);
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  top: 10px;
+  z-index: 3;
+}
+
+.cat-face {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: -10px;
+}
+
+.cat-ear-l,
+.cat-ear-r {
+  position: absolute;
+  top: -10px;
+  width: 20px;
+  height: 30px;
+  /* make triangles */
+  background: conic-gradient(at 50% 50%,
+      transparent 135deg,
+      rgb(45, 45, 45) 0,
+      rgb(225, 225, 225) 225deg,
+      transparent 0) no-repeat;
+}
+
+.cat-ear-l {
+  left: 0;
+}
+
+.cat-ear-r {
+  right: 0;
+}
+
+.cat-body {
+  width: 180px;
+  height: 60px;
+  background: orange;
+  border-radius: 20px 50px 50px 50px;
+  position: relative;
+  top: -10px;
+  z-index: 2;
+}
+
+.paw {
+  width: 15px;
+  height: 60px;
+  background: rgb(255, 255, 255);
+  transform: rotateZ(0deg);
+  border-radius: 50px;
+  position: absolute;
+  bottom: -20px;
+}
+
+.paw-1 {
+  left: 5%;
+}
+
+.paw-2 {
+  left: 17.5%;
+}
+
+.paw-3 {
+  left: 50%;
+}
+
+.paw-4 {
+  left: 62.5%;
+}
+
+.cat-tail {
+  background: rgb(185, 185, 185);
+  width: 80px;
+  height: 20px;
+  border-radius: 50px;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  transform: rotateZ(120deg);
+}
+
+/* calico-cat styles */
+.calico .cat-body {
+  background: rgb(164, 162, 162);
+}
+
+.calico .cat-tail {
+  background: rgb(70, 68, 65);
+}
+
+.calico .cat-head {
+  background: white;
+}
+
+.calico .paw {
+  background: white;
+}
+
+.calico .paw-2 {
+  background: white;
+}
+
+/* tail animation styles */
+.aggro .cat-tail {
+  animation: wag 2s infinite;
+}
+
+@keyframes wag {
+  0% {
+    transform: rotateZ(120deg);
+  }
+
+  50% {
+    transform: rotateZ(90deg);
+  }
+
+  100% {
+    transform: rotateZ(120deg);
+  }
+}
+
+/* runaway cat animation styles */
+.cat-container {
+  top: 0;
+  left: 0;
+  transition: top 1s, left 1s;
+}
+
+.hungry {
+  padding: 1rem;
+  position: absolute;
+  transition: 0.5s ea
+}
+
+.bowl {
+  background: #333;
+  width: 70px;
+  height: 30px;
+  border-radius: 0px 0px 50px 50px;
+  position: relative;
+  margin-top: -10;
+}
+
+.food {
+  background: rgb(227, 149, 71);
+  position: relative;
+  width: 50px;
+  height: 20px;
+  border-radius: 50% 50% 0% 0%;
+  padding-left: 20px;
+  transition: 1.5s ease;
+}
+
+.button {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 10%;
+  height: 30px;
+  border-radius: 15px;
+  background: #BAD3F3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 45%;
+  margin-bottom: 5%;
+}
+
+.button>p {
+  font-size: 0.9rem;
+  margin: 0px;
+}
